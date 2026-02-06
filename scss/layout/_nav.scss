@@ -1,0 +1,150 @@
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  background: rgba(28, 141, 221, 0.15);
+  backdrop-filter: blur(10px);
+
+  .btn-cv {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+    cursor: pointer;
+  }
+
+  #nav ul {
+    display: flex;
+    gap: 14px;
+    margin-right: 20px;
+
+    li {
+      list-style: none;
+
+      a {
+        color: var(--accent);
+        font-weight: 600;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  /* hamburguesa oculta en desktop */
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 950px) {
+  #header {
+    justify-content: center;
+
+    /* ===== HAMBURGUESA CLÁSICA ===== */
+    .menu-toggle {
+      display: flex;
+      position: absolute;
+      right: 20px;
+
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(6px);
+      cursor: pointer;
+
+      align-items: center;
+      justify-content: center;
+
+      span {
+        width: 20px;
+        height: 2px;
+        background: var(--accent);
+        position: relative;
+        transition: all 0.3s ease;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 2px;
+          background: var(--accent);
+          left: 0;
+          transition: all 0.3s ease;
+        }
+
+        &::before {
+          top: -6px;
+        }
+
+        &::after {
+          top: 6px;
+        }
+      }
+
+      &.active span {
+        background: transparent;
+
+        &::before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    /* ===== NAV MOBILE ===== */
+    #nav {
+      position: absolute;
+      top: 90px;
+      right: 20px;
+
+      width: 260px;
+
+      background: rgba(30, 70, 140, 0.95);
+      backdrop-filter: blur(14px);
+      border-radius: 16px;
+      padding: 24px 0;
+
+      box-shadow: 0 18px 40px rgba(0,0,0,0.3);
+
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-10px) scale(0.96);
+      transition: all 0.3s ease;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+      }
+    }
+
+    #nav.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+  }
+}

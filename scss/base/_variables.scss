@@ -1,0 +1,23 @@
+:root {
+  /* Backgrounds */
+  --bg-main: #0b1c2d;
+  --bg-radial-start: #1e3f64;
+  --bg-radial-end: #0f243e;
+
+  /* Colores primarios (identidad) */
+  --primary: #3b82f6;       /* azul principal */
+  --primary-soft: #60a5fa;  /* azul claro */
+  --accent: #2dd4bf;        /* acento verdoso educativo */
+
+  /* Textos */
+  --text-main: #e5e7eb;     /* texto principal */
+  --text-soft: #94a3b8;     /* párrafos */
+  --text-muted: #64748b;    /* secundarios */
+
+  /* Botones */
+  --button-bg: linear-gradient(135deg, #2dd4bf, #3b82f6);
+  --button-text: #0b1c2d;
+
+  /* Bordes / detalles */
+  --border-soft: rgba(255, 255, 255, 0.08);
+}

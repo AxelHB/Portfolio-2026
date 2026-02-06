@@ -1,0 +1,17 @@
+//BASE STYLES
+@use "base/reset";
+@use "base/variables";
+
+//LAYOUT STYLES
+@use "layout/grid";
+@use "layout/header";
+@use "layout/nav";
+@use "layout/footer";
+
+//SECTIONS STYLES
+@use "sections/sobreMi";
+@use "sections/experiencia";
+@use "sections/habilidades";
+@use "sections/educacion";
+@use "sections/proyectos";
+@use "sections/contacto";
