@@ -1,4 +1,8 @@
+@use "../base/variables" as *;
+@use "../components/extends" as *;
+
 #header {
+  max-width: 1400px;
   position: fixed;
   top: 0;
   width: 100%;

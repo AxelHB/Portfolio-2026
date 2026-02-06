@@ -1,0 +1,131 @@
+@use "../base/variables" as *;
+@use "../components/extends" as *;
+
+.skills {
+    padding-left: 30px;
+    padding-right: 30px;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+        font-size: 2rem;
+        margin-bottom: clamp(2rem, 6vh, 4rem);
+        background: linear-gradient(90deg,var(--accent),var(--primary));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+    }
+
+    &__card {
+        --card-color: var(--accent);
+
+        position: relative;
+        border-radius: 14px;
+        overflow: hidden;
+        perspective: 1000px;
+        cursor: pointer;
+
+        @extend .about__box;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto 0;
+            height: 4px;
+            background-color: var(--card-color);
+            z-index: 2;
+        }
+    }
+
+    &__card-inner {
+        position: relative;
+        width: 100%;
+        min-height: 300px;
+        transform-style: preserve-3d;
+        transition: transform 0.6s ease;
+    }
+
+    &__card:hover &__card-inner,
+    &__card:focus-within &__card-inner {
+        transform: rotateY(180deg);
+    }
+
+    &__face {
+        position: absolute;
+        inset: 0;
+        padding: 2rem;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__face--back {
+        transform: rotateY(180deg);
+        text-align: center;
+        font-size: 0.95rem;
+        color: var(--text-soft);
+        line-height: 1.6;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 1.5rem;
+
+        i {
+            font-size: 1.3rem;
+            color: var(--card-color);
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 10px;
+
+        li {
+            position: relative;
+            padding-left: 14px;
+            font-size: 0.9rem;
+            color: var(--text-soft);
+
+            &::before {
+                content: "•";
+                position: absolute;
+                left: 0;
+                color: var(--card-color);
+            }
+        }
+    }
+}
+
+    /* Colores por tarjeta */
+    .skills__card--backend { --card-color: #5da9e9; }
+    .skills__card--frontend { --card-color: #f4a261; }
+    .skills__card--tools { --card-color: #2a9d8f; }
+    .skills__card--qa { --card-color: #e76f51; }
+    .skills__card--personal { --card-color: #a78bfa; }
+
+    @media (max-width: 600px) {
+    .skills {
+        padding: 60px 20px;
+    }
+}

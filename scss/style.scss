@@ -2,9 +2,10 @@
 @use "base/reset";
 @use "base/variables";
 
+//COMPONENTS STYLES
+@use "components/extends";
+
 //LAYOUT STYLES
-@use "layout/grid";
-@use "layout/header";
 @use "layout/nav";
 @use "layout/footer";
 

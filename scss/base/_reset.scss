@@ -1,6 +1,9 @@
 @use "../base/variables" as *;
+@use "../components/extends" as *;
 
-/* 1. Box sizing */
+/* =========================
+  1. Box sizing & base
+========================= */
 *,
 *::before,
 *::after {
@@ -9,54 +12,77 @@
 
 * {
   margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
-  list-style: none;
 }
 
-
-
-#inicio, #about, #experiencia, #habilidades, #educacion, #proyectos, #contacto {
-  scroll-margin-top: 80px;
+/* =========================
+  2. HTML & BODY
+========================= */
+html,
+body {
+  max-width: 1400px;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  margin: 0 auto;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+
   background: radial-gradient(
     circle at top left,
     var(--bg-radial-start),
     var(--bg-radial-end)
   );
+
   color: var(--text-main);
-
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-
-  min-height: 100vh;
   line-height: 1.5;
 
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
+/* =========================
+  3. Scroll offset (header fijo)
+========================= */
+#inicio,
+#about,
+#experiencia,
+#habilidades,
+#educacion,
+#proyectos,
+#contacto {
+  scroll-margin-top: 80px;
+}
+
+/* =========================
+  4. Layout principal
+========================= */
 #main {
   display: flex;
-  flex-direction: column;;
+  flex-direction: column;
   align-items: center;
+
+  width: 100%;
   max-width: 1400px;
-  width: 90%;
   margin: 0 auto;
+
+  min-height: 100dvh; // viewport real
 }
 
-article,section {
+/* Secciones siempre contenidas */
+section,
+article {
   width: 100%;
 }
 
-
-
-
+/* =========================
+  5. Media defaults
+========================= */
 img,
 picture,
 video,
@@ -66,6 +92,9 @@ svg {
   max-width: 100%;
 }
 
+/* =========================
+  6. Form elements
+========================= */
 input,
 button,
 textarea,
@@ -73,6 +102,9 @@ select {
   font: inherit;
 }
 
+/* =========================
+  7. Text wrapping
+========================= */
 p,
 h1,
 h2,
@@ -83,7 +115,9 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* 7. Root stacking context (framework friendly) */
+/* =========================
+  8. Root stacking context
+========================= */
 #root,
 #__next {
   isolation: isolate;

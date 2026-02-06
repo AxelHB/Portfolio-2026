@@ -18,66 +18,473 @@
 <body>
 
     <header id="header">
-  <button class="btn-cv">Curriculum</button>
+        <button class="btn-cv">Curriculum</button>
 
-  <button class="menu-toggle" aria-label="Abrir menú">
-  <span></span>
-</button>
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+        </button>
 
-  <nav id="nav">
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#about">Sobre Mí</a></li>
-      <li><a href="#experiencia">Experiencia</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="#educacion">Educación</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
-
-    
+        <nav id="nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#educacion">Educación</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main id="main">
 
         <section class="hero" id="inicio">
             <section class="hero__content">
-                <article class="hero__intro">
+                <div class="hero__intro">
                     <span class="hero__greeting">Hola, soy</span>
                     <h1 class="hero__name">Axel Henderson Bianchi</h1>
                     <h2 class="hero__role">Desarrollador Front-End & Educador</h2>
-                </article>
+                </div>
 
                 <p class="hero__description">
                 Desarrollador con más de seis años de experiencia en el ámbito educativo, enfocado en crear soluciones digitales y experiencias interactivas que acompañan procesos de aprendizaje reales y aportan valor a través de la tecnología.
                 </p>
                 
-                
                 <a href="#proyectos" class="hero__button">¡Mirá mi trabajo!</a>
                 
-                <article class="hero__social-media">
+                <div class="hero__social-media">
                     <i class="fa-brands fa-github"></i>
                     <i class="fa-brands fa-linkedin"></i>
                     <i class="fa-brands fa-youtube"></i>
-                </article>
+                </div>
             </section>
         </section>
         
         <section id="about">
             <h2>Sobre Mí</h2>
             <section class="about__content">
-                <article class="about__text">
+                <div class="about__text">
                     <p>Desde hace más de seis años trabajo en el ámbito educativo como desarrollador y formador, combinando tecnología, creatividad y vocación docente. A lo largo de este recorrido participé en distintos proyectos e instituciones vinculadas a la educación digital, desarrollando soluciones tecnológicas y experiencias interactivas que acompañan procesos de aprendizaje reales.</p>
                     <br>
                     <p>Mi enfoque está en enseñar, guiar y transmitir conocimientos de forma clara, práctica y significativa, apoyándome en fundamentos técnicos sólidos y en una mirada pedagógica centrada en las personas. Me motiva crear herramientas que no solo funcionen bien, sino que también ayuden a aprender y comprender mejor.</p>
-                </article>
-                <article class="about__image">
+                </div>
+                <div class="about__image">
                     <img src="images/Perfil.jpg" alt="Foto de perfil de Axel HB">
-                </article>
+                </div>
             </section>
-            
         </section>
+
+        <section id="experiencia">
+            <h2>Experiencia</h2>
+
+            <section class="experience__card">
+                <div class="experience__header">
+                    <div class="experience__icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <div class="experience__title">
+                        <h3>
+                            Especialista de Proyecto
+                            <span>@ Digital Flow</span>
+                        </h3>
+
+                        <div class="experience__meta">
+                            <span class="experience__location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Argentina · Presencial
+                            </span>
+                            <span class="experience__date">
+                                Marzo 2025 - Presente
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="experience__list">
+                    <li>
+                        Colaboro en la integración de tecnologías creativas aplicadas a la gestión y el desarrollo
+                        de instituciones educativas, con foco en innovación y transformación digital.
+                    </li>
+                    <li>
+                        Participación en proyectos STEAM que combinan robótica, programación e impresión 3D,
+                        promoviendo el aprendizaje interdisciplinario.
+                    </li>
+                    <li>
+                        Diseño y planificación de propuestas educativas orientadas al desarrollo de habilidades
+                        del siglo XXI, fomentando el pensamiento lógico, creativo y colaborativo.
+                    </li>
+                    <li>
+                        Implementación de soluciones tecnológicas adaptadas a contextos educativos reales,
+                        acompañando procesos pedagógicos y organizacionales.
+                    </li>
+                    <li class="experience__tools">
+                        Aptitudes y herramientas: Gestión de proyectos, Programación, Programación de robots,
+                        Planificación de proyectos, Autodesk Tinkercad.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="experience__card">
+                <div class="experience__header">
+                    <div class="experience__icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <div class="experience__title">
+                        <h3>
+                            Education Mentor – Desarrollo Web Front End
+                            <span>@ Coderhouse</span>
+                        </h3>
+
+                        <div class="experience__meta">
+                            <span class="experience__location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Argentina · En remoto
+                            </span>
+                            <span class="experience__date">
+                                Enero 2023 - Presente
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="experience__list">
+                    <li>
+                        Mentor y profesor en la tecnología de Desarrollo Web Front End, acompañando a estudiantes
+                        durante todo el proceso de aprendizaje teórico y práctico.
+                    </li>
+                    <li>
+                        Enseñanza de fundamentos y buenas prácticas en HTML5, CSS3 y JavaScript, con foco en
+                        maquetado semántico, diseño responsive y accesibilidad.
+                    </li>
+                    <li>
+                        Aplicación de metodologías modernas de diseño utilizando Flexbox, CSS Grid, Bootstrap
+                        y preprocesadores como SASS.
+                    </li>
+                    <li>
+                        Introducción al uso de control de versiones con Git y GitHub, promoviendo flujos de trabajo
+                        ordenados y colaborativos.
+                    </li>
+                    <li>
+                        Acompañamiento personalizado, revisión de proyectos y resolución de dudas, fomentando la
+                        autonomía y el pensamiento lógico.
+                    </li>
+                    <li class="experience__tools">
+                        Tecnologías y habilidades: HTML5, CSS3, SASS, Flexbox, CSS Grid, Bootstrap, Git, GitHub,
+                        Figma, Git Bash, Diseño Responsive, SEO básico e Inglés técnico.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="experience__card">
+                <div class="experience__header">
+                    <div class="experience__icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <div class="experience__title">
+                        <h3>
+                            Instructor & Education Mentor
+                            <span>@ Ministerio de Educación GCBA</span>
+                        </h3>
+
+                        <div class="experience__meta">
+                            <span class="experience__location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Argentina
+                            </span>
+                            <span class="experience__date">
+                                Enero 2020 - Presente
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="experience__list">
+                    <li>
+                        Diseño e imparto un curso completo de QA Testing, abarcando pruebas manuales y automatizadas,
+                        orientado a entornos reales de desarrollo y a la inserción laboral.
+                    </li>
+                    <li>
+                        Desarrollo contenidos sobre fundamentos de testing, control de calidad de software,
+                        ejecución de pruebas funcionales manuales y análisis de resultados.
+                    </li>
+                    <li>
+                        Automatización de pruebas utilizando JavaScript, JSON, XML y herramientas como Postman,
+                        promoviendo buenas prácticas dentro del ciclo de desarrollo.
+                    </li>
+                    <li>
+                        Instructor en programas de formación tecnológica para personas adultas desde Talento Tech
+                        Argentina, fomentando el aprendizaje basado en la experiencia y la cotidianidad.
+                    </li>
+                    <li>
+                        Mentor educativo en niveles Primario y Secundario, enseñando Desarrollo Web Front End,
+                        Robótica, Videojuegos y Programación Inicial con enfoque lógico y aplicado.
+                    </li>
+                    <li class="experience__tools">
+                        Tecnologías y habilidades: QA Manual, QA Automation, JavaScript, Postman, Python, SQL,
+                        HTML Semántico, Documentación, Mentoría Educativa y Buenas Prácticas de Desarrollo.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="experience__card">
+                <div class="experience__header">
+                    <div class="experience__icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <div class="experience__title">
+                        <h3>
+                            Mentor en Desarrollo Web
+                            <span>@ UTN Buenos Aires</span>
+                        </h3>
+
+                        <div class="experience__meta">
+                            <span class="experience__location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Argentina · Presencial
+                            </span>
+                            <span class="experience__date">
+                                Abril 2022 - Noviembre 2022
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="experience__list">
+                    <li>
+                        Me desempeñé como Mentor en Desarrollo Web – Front End, acompañando a chicas y chicos
+                        que transitaban los últimos años de la escuela secundaria.
+                    </li>
+                    <li>
+                        Introducción a los fundamentos del desarrollo web mediante prácticas accesibles,
+                        lógicas y orientadas a la comprensión real de la tecnología.
+                    </li>
+                    <li>
+                        Enseñanza de buenas prácticas en HTML semántico, estructura de proyectos y uso de
+                        herramientas de control de versiones.
+                    </li>
+                    <li>
+                        Fomento del pensamiento lógico y la resolución de problemas a través del diseño y
+                        maquetado de interfaces web responsivas.
+                    </li>
+                    <li class="experience__tools">
+                        Aptitudes y herramientas: HTML semántico, HTML5, CSS Flexbox, CSS Grid, CSS Forms,
+                        Bootstrap, Git, GitHub, Git BASH.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="experience__card">
+                <div class="experience__header">
+                    <div class="experience__icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <div class="experience__title">
+                        <h3>
+                            Profesor
+                            <span>@ TecnoKids LATAM</span>
+                        </h3>
+
+                        <div class="experience__meta">
+                            <span class="experience__location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Argentina · Presencial
+                            </span>
+                            <span class="experience__date">
+                                Enero 2025 - Noviembre 2025
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="experience__list">
+                    <li>
+                        Profesor en TecnoKids LATAM, dedicado a la enseñanza de robótica, programación y
+                        desarrollo de videojuegos para chicos y chicas de distintas edades.
+                    </li>
+                    <li>
+                        Diseño de clases dinámicas y prácticas orientadas a despertar la curiosidad tecnológica
+                        y el aprendizaje activo a través del juego.
+                    </li>
+                    <li>
+                        Acompañamiento en el desarrollo de habilidades lógicas, creativas y de resolución de
+                        problemas desde edades tempranas.
+                    </li>
+                    <li>
+                        Trabajo colaborativo dentro de un equipo educativo comprometido con generar un ambiente
+                        positivo, inclusivo y estimulante en cada clase.
+                    </li>
+                    <li class="experience__tools">
+                        Aptitudes y herramientas: Robótica inicial con Arduino UNO, Robótica con Micro:bit,
+                        Programación de robots, Videojuegos con Scratch, Automatización robótica de procesos,
+                        Educación tecnológica.
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="skills" id="habilidades">
+            <h2 class="skills__title">Habilidades</h2>
+
+            <div class="skills__grid">
+
+                <!-- Backend -->
+                <article class="skills__card skills__card--backend" tabindex="0">
+                <div class="skills__card-inner">
+
+                    <div class="skills__face skills__face--front">
+                    <header class="skills__header">
+                        <i class="fa-solid fa-server"></i>
+                        <h3>Desarrollo Backend</h3>
+                    </header>
+                    <ul class="skills__list">
+                        <li>PHP</li>
+                        <li>PHPUnit</li>
+                        <li>Python</li>
+                        <li>FastAPI</li>
+                        <li>APIs REST</li>
+                    </ul>
+                    </div>
+
+                    <div class="skills__face skills__face--back">
+                    <p>
+                        Desarrollo de lógica de negocio, APIs y servicios backend
+                        orientados a escalabilidad, mantenimiento y comunicación
+                        con sistemas frontend y externos.
+                    </p>
+                    </div>
+
+                </div>
+                </article>
+
+                <!-- Frontend -->
+                <article class="skills__card skills__card--frontend" tabindex="0">
+                <div class="skills__card-inner">
+
+                    <div class="skills__face skills__face--front">
+                    <header class="skills__header">
+                        <i class="fa-solid fa-palette"></i>
+                        <h3>Desarrollo Frontend</h3>
+                    </header>
+                    <ul class="skills__list">
+                        <li>HTML5 Semántico</li>
+                        <li>CSS3 / SASS</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>React.js</li>
+                        <li>Flexbox & Grid</li>
+                        <li>Tailwind / Bootstrap</li>
+                        <li>UX / UI</li>
+                    </ul>
+                    </div>
+
+                    <div class="skills__face skills__face--back">
+                    <p>
+                        Creación de interfaces modernas, accesibles y responsivas,
+                        priorizando experiencia de usuario, claridad visual
+                        y buenas prácticas de desarrollo.
+                    </p>
+                    </div>
+
+                </div>
+                </article>
+
+                <!-- Herramientas -->
+                <article class="skills__card skills__card--tools" tabindex="0">
+                <div class="skills__card-inner">
+
+                    <div class="skills__face skills__face--front">
+                    <header class="skills__header">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <h3>Infraestructura & Herramientas</h3>
+                    </header>
+                    <ul class="skills__list">
+                        <li>Git / GitHub / Bitbucket</li>
+                        <li>MySQL</li>
+                        <li>WordPress</li>
+                        <li>Node.js (entorno)</li>
+                        <li>JIRA</li>
+                    </ul>
+                    </div>
+
+                    <div class="skills__face skills__face--back">
+                    <p>
+                        Uso de herramientas de control de versiones, gestión
+                        de proyectos y entornos de desarrollo que acompañan
+                        flujos de trabajo profesionales y colaborativos.
+                    </p>
+                    </div>
+
+                </div>
+                </article>
+
+                <!-- QA -->
+                <article class="skills__card skills__card--qa" tabindex="0">
+                <div class="skills__card-inner">
+
+                    <div class="skills__face skills__face--front">
+                    <header class="skills__header">
+                        <i class="fa-solid fa-bug"></i>
+                        <h3>QA & Testing</h3>
+                    </header>
+                    <ul class="skills__list">
+                        <li>Testing manual funcional</li>
+                        <li>Casos de prueba</li>
+                        <li>Documentación de bugs</li>
+                        <li>Postman</li>
+                        <li>Testing de APIs</li>
+                        <li>Automatización básica</li>
+                    </ul>
+                    </div>
+
+                    <div class="skills__face skills__face--back">
+                    <p>
+                        Enfoque en calidad de software, detección temprana
+                        de errores y documentación clara para mejorar
+                        procesos de desarrollo y experiencia final.
+                    </p>
+                    </div>
+
+                </div>
+                </article>
+
+                <!-- Educación -->
+                <article class="skills__card skills__card--personal" tabindex="0">
+                <div class="skills__card-inner">
+
+                    <div class="skills__face skills__face--front">
+                    <header class="skills__header">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h3>Educación & Habilidades Personales</h3>
+                    </header>
+                    <ul class="skills__list">
+                        <li>Pasión por enseñar</li>
+                        <li>Mentoría técnica</li>
+                        <li>Comunicación empática</li>
+                        <li>Acompañamiento humano</li>
+                        <li>Aprendizaje continuo</li>
+                    </ul>
+                    </div>
+
+                    <div class="skills__face skills__face--back">
+                    <p>
+                        La tecnología como puente para enseñar, acompañar
+                        y generar oportunidades reales, siempre poniendo
+                        a las personas en el centro del proceso.
+                    </p>
+                    </div>
+
+                </div>
+                </article>
+
+            </div>
+        </section>
+
+
     </main>
 
     <footer id="footer">

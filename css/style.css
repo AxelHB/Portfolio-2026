@@ -19,7 +19,23 @@
   --border-soft: rgba(255, 255, 255, 0.08);
 }
 
-/* 1. Box sizing */
+.about__box, .skills__card, #experiencia .experience__card, #about .about__content .about__text, #about .about__content .about__image {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(36, 41, 57, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.about__box:hover, .skills__card:hover, #experiencia .experience__card:hover, #about .about__content .about__text:hover, #about .about__content .about__image:hover {
+  border-color: var(--accent);
+  box-shadow: 0 3px 9px 0 var(--accent);
+  transform: translateY(-3px);
+}
+
+/* =========================
+  1. Box sizing & base
+========================= */
 *,
 *::before,
 *::after {
@@ -28,12 +44,20 @@
 
 * {
   margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
-  list-style: none;
 }
 
-#inicio, #about, #experiencia, #habilidades, #educacion, #proyectos, #contacto {
-  scroll-margin-top: 80px;
+/* =========================
+  2. HTML & BODY
+========================= */
+html,
+body {
+  max-width: 1400px;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  margin: 0 auto;
 }
 
 body {
@@ -42,27 +66,46 @@ body {
   font-style: normal;
   background: radial-gradient(circle at top left, var(--bg-radial-start), var(--bg-radial-end));
   color: var(--text-main);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  min-height: 100vh;
   line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
+/* =========================
+  3. Scroll offset (header fijo)
+========================= */
+#inicio,
+#about,
+#experiencia,
+#habilidades,
+#educacion,
+#proyectos,
+#contacto {
+  scroll-margin-top: 80px;
+}
+
+/* =========================
+  4. Layout principal
+========================= */
 #main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   max-width: 1400px;
-  width: 90%;
   margin: 0 auto;
+  min-height: 100dvh;
 }
 
-article, section {
+/* Secciones siempre contenidas */
+section,
+article {
   width: 100%;
 }
 
+/* =========================
+  5. Media defaults
+========================= */
 img,
 picture,
 video,
@@ -72,6 +115,9 @@ svg {
   max-width: 100%;
 }
 
+/* =========================
+  6. Form elements
+========================= */
 input,
 button,
 textarea,
@@ -79,6 +125,9 @@ select {
   font: inherit;
 }
 
+/* =========================
+  7. Text wrapping
+========================= */
 p,
 h1,
 h2,
@@ -89,13 +138,16 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* 7. Root stacking context (framework friendly) */
+/* =========================
+  8. Root stacking context
+========================= */
 #root,
 #__next {
   isolation: isolate;
 }
 
 #header {
+  max-width: 1400px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -223,8 +275,9 @@ h6 {
   }
 }
 .hero {
-  min-height: calc(100dvh - 80px);
   padding-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -298,14 +351,16 @@ h6 {
 }
 
 #about {
-  height: 100vh;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 #about h2 {
   font-size: 2rem;
-  margin-bottom: 60px;
+  margin-bottom: clamp(2rem, 6vh, 4rem);
   background: linear-gradient(90deg, var(--accent), var(--primary));
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -319,16 +374,6 @@ h6 {
 #about .about__content .about__text {
   width: 65%;
   padding: 2rem 2rem;
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(36, 41, 57, 0.75);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
-  transition: border-color 0.3s ease-in-out;
-}
-#about .about__content .about__text:hover {
-  border-color: var(--accent);
-  box-shadow: 0 3px 9px 0 var(--accent);
 }
 #about .about__content .about__image {
   width: 35%;
@@ -336,16 +381,6 @@ h6 {
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(36, 41, 57, 0.75);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
-  transition: border-color 0.3s ease-in-out;
-}
-#about .about__content .about__image:hover {
-  border-color: var(--accent);
-  box-shadow: 0 3px 9px 0 var(--accent);
 }
 #about .about__content .about__image img {
   width: 50%;
@@ -372,6 +407,233 @@ h6 {
   }
   #about .about__content .about__text img, #about .about__content .about__image img {
     filter: grayscale(0%);
+  }
+}
+
+#experiencia {
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+#experiencia h2 {
+  font-size: 2rem;
+  margin-bottom: clamp(2rem, 6vh, 4rem);
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#experiencia .experience__card {
+  padding: 2rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  /* ================= HEADER ================= */
+}
+#experiencia .experience__card .experience__header {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 1rem;
+}
+#experiencia .experience__card .experience__header .experience__icon {
+  min-width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 255, 200, 0.15);
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+#experiencia .experience__card .experience__header .experience__title {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+}
+#experiencia .experience__card .experience__header .experience__title h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+#experiencia .experience__card .experience__header .experience__title h3 span {
+  color: var(--accent);
+  font-weight: 600;
+}
+#experiencia .experience__card .experience__header .experience__title .experience__meta {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+}
+#experiencia .experience__card .experience__header .experience__title .experience__meta span {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+#experiencia .experience__card .experience__header .experience__title .experience__meta span i {
+  color: var(--accent);
+}
+#experiencia .experience__card {
+  /* ================= LIST ================= */
+}
+#experiencia .experience__card .experience__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
+  padding-left: 1.2rem;
+}
+#experiencia .experience__card .experience__list li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-soft);
+}
+#experiencia .experience__card .experience__list li::marker {
+  color: var(--accent);
+}
+#experiencia .experience__card .experience__list li.experience__tools {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+#experiencia .experience__card {
+  /* ================= RESPONSIVE ================= */
+}
+@media (max-width: 768px) {
+  #experiencia .experience__card .experience__header {
+    flex-direction: column;
+    row-gap: 0.75rem;
+  }
+}
+
+.skills {
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills h2 {
+  font-size: 2rem;
+  margin-bottom: clamp(2rem, 6vh, 4rem);
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.skills__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+.skills__card {
+  --card-color: var(--accent);
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  perspective: 1000px;
+  cursor: pointer;
+}
+.skills__card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background-color: var(--card-color);
+  z-index: 2;
+}
+.skills__card-inner {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+.skills__card:hover .skills__card-inner, .skills__card:focus-within .skills__card-inner {
+  transform: rotateY(180deg);
+}
+.skills__face {
+  position: absolute;
+  inset: 0;
+  padding: 2rem;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.skills__face--back {
+  transform: rotateY(180deg);
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+.skills__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+.skills__header i {
+  font-size: 1.3rem;
+  color: var(--card-color);
+}
+.skills__header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.skills__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+}
+.skills__list li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+.skills__list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--card-color);
+}
+
+/* Colores por tarjeta */
+.skills__card--backend {
+  --card-color: #5da9e9;
+}
+
+.skills__card--frontend {
+  --card-color: #f4a261;
+}
+
+.skills__card--tools {
+  --card-color: #2a9d8f;
+}
+
+.skills__card--qa {
+  --card-color: #e76f51;
+}
+
+.skills__card--personal {
+  --card-color: #a78bfa;
+}
+
+@media (max-width: 600px) {
+  .skills {
+    padding: 60px 20px;
   }
 }
 

@@ -1,0 +1,119 @@
+@use "../base/variables" as *;
+@use "../components/extends" as *;
+
+#experiencia {
+    padding-left: 30px;
+    padding-right: 30px;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    h2 {
+        font-size: 2rem;
+        margin-bottom: clamp(2rem, 6vh, 4rem);
+        background: linear-gradient(90deg,var(--accent),var(--primary));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .experience__card {
+        padding: 2rem;
+        border-radius: 16px;
+        @extend .about__box;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+
+        /* ================= HEADER ================= */
+        .experience__header {
+        display: flex;
+        align-items: flex-start;
+        column-gap: 1rem;
+
+        .experience__icon {
+            min-width: 44px;
+            height: 44px;
+            border-radius: 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(0, 255, 200, 0.15);
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        .experience__title {
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.25rem;
+
+            h3 {
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    color: var(--text-main);
+
+                span {
+                    color: var(--accent);
+                    font-weight: 600;
+                }
+            }
+
+            .experience__meta {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 1rem;
+                row-gap: 0.25rem;
+
+                font-size: 0.85rem;
+                color: var(--text-soft);
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 4px;
+
+                    i {
+                        color: var(--accent);
+                    }
+                }
+            }
+        }
+    }
+
+    /* ================= LIST ================= */
+    .experience__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.75rem;
+
+        padding-left: 1.2rem;
+
+        li {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-soft);
+
+            &::marker {
+            color: var(--accent);
+            }
+
+            &.experience__tools {
+                margin-top: 0.5rem;
+                font-size: 0.85rem;
+                color: var(--text-main);
+            }
+        }
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 768px) {
+            .experience__header {
+                flex-direction: column;
+                row-gap: 0.75rem;
+            }
+        }
+    }
+}
