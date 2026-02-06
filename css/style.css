@@ -223,13 +223,20 @@ h6 {
   }
 }
 .hero {
+  min-height: calc(100dvh - 80px);
   padding-top: 80px;
-  min-height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
-
-.hero__greeting {
+.hero .hero__content {
+  min-height: calc(100dvh - 80px);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-block: clamp(1.5rem, 4vh, 4rem);
+}
+.hero .hero__content .hero__greeting {
   display: block;
   margin-bottom: 1rem;
   font-size: 0.95rem;
@@ -237,8 +244,7 @@ h6 {
   text-transform: uppercase;
   color: var(--accent);
 }
-
-.hero__name {
+.hero .hero__content .hero__name {
   font-size: clamp(2.2rem, 6vw, 5.5rem);
   font-weight: 800;
   line-height: 1.1;
@@ -247,24 +253,22 @@ h6 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-.hero__role {
+.hero .hero__content .hero__role {
   font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 600;
   margin-bottom: 1.5rem;
   color: var(--text-main);
 }
-
-.hero__description {
+.hero .hero__content .hero__description {
   max-width: 620px;
   font-size: 1.05rem;
   line-height: 1.7;
   color: var(--text-soft);
   margin-bottom: 2.5rem;
 }
-
-.hero__button {
+.hero .hero__content .hero__button {
   display: inline-block;
+  width: fit-content;
   padding: 0.9rem 1.6rem;
   border-radius: 10px;
   background: var(--button-bg);
@@ -272,6 +276,25 @@ h6 {
   font-weight: 600;
   text-decoration: none;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.hero .hero__content .hero__button:hover {
+  border-color: var(--accent);
+  box-shadow: 0 3px 9px 0 var(--accent);
+}
+.hero .hero__content .hero__social-media {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: var(--text-soft);
+}
+.hero .hero__content .hero__social-media i {
+  margin-right: 15px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.hero .hero__content .hero__social-media i:hover {
+  color: var(--accent);
 }
 
 #about {
