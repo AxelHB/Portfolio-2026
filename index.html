@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- AOS (Animate On Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -42,18 +45,20 @@
         <section class="hero" id="inicio">
             <section class="hero__content">
                 <div class="hero__intro">
-                    <span class="hero__greeting">Hola, soy</span>
-                    <h1 class="hero__name">Axel Henderson Bianchi</h1>
-                    <h2 class="hero__role">Desarrollador Front-End & Educador</h2>
+                    <span class="hero__greeting" data-aos="fade-down" data-aos-duration="400" data-aos-offset="0">Hola, soy</span>
+                    <h1 class="hero__name" data-aos="fade-down" data-aos-delay="200" data-aos-duration="600" data-aos-offset="0">Axel Henderson Bianchi</h1>
+                    <h2 class="hero__role" data-aos="fade-right" data-aos-delay="400" data-aos-duration="600" data-aos-offset="0">Desarrollador Front-End & Educador</h2>
                 </div>
 
-                <p class="hero__description">
+                <p class="hero__description" data-aos="fade-up-right" data-aos-delay="600" data-aos-duration="600" data-aos-offset="0">
                 Desarrollador con más de seis años de experiencia en el ámbito educativo, enfocado en crear soluciones digitales y experiencias interactivas que acompañan procesos de aprendizaje reales y aportan valor a través de la tecnología.
                 </p>
                 
-                <a href="#proyectos" class="hero__button">¡Mirá mi trabajo!</a>
+                <div data-aos="flip-left" data-aos-delay="800" data-aos-duration="1600" data-aos-offset="0">
+                    <a href="#proyectos" class="hero__button">¡Mirá mi trabajo!</a>
+                </div>
                 
-                <div class="hero__social-media">
+                <div class="hero__social-media" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300" data-aos-offset="0">
                     <i class="fa-brands fa-github"></i>
                     <i class="fa-brands fa-linkedin"></i>
                     <i class="fa-brands fa-youtube"></i>
@@ -62,23 +67,24 @@
         </section>
         
         <section id="about">
-            <h2>Sobre Mí</h2>
+            <h2 data-aos="fade-down">Sobre Mí</h2>
             <section class="about__content">
-                <div class="about__text">
+                <div class="about__text" data-aos="fade-right">
                     <p>Desde hace más de seis años trabajo en el ámbito educativo como desarrollador y formador, combinando tecnología, creatividad y vocación docente. A lo largo de este recorrido participé en distintos proyectos e instituciones vinculadas a la educación digital, desarrollando soluciones tecnológicas y experiencias interactivas que acompañan procesos de aprendizaje reales.</p>
                     <br>
                     <p>Mi enfoque está en enseñar, guiar y transmitir conocimientos de forma clara, práctica y significativa, apoyándome en fundamentos técnicos sólidos y en una mirada pedagógica centrada en las personas. Me motiva crear herramientas que no solo funcionen bien, sino que también ayuden a aprender y comprender mejor.</p>
                 </div>
-                <div class="about__image">
+                <div class="about__image" div data-aos="fade-left">
                     <img src="images/Perfil.jpg" alt="Foto de perfil de Axel HB">
                 </div>
             </section>
         </section>
 
         <section id="experiencia">
-            <h2>Experiencia</h2>
+            <h2 data-aos="fade-down">Experiencia</h2>
 
-            <section class="experience__card">
+            <!--DIGITAL FLOW-->
+            <section class="experience__card" data-aos="flip-up">
                 <div class="experience__header">
                     <div class="experience__icon">
                         <i class="fa-solid fa-briefcase"></i>
@@ -126,7 +132,8 @@
                 </ul>
             </section>
 
-            <section class="experience__card">
+            <!-- Coderhouse -->
+            <section class="experience__card" data-aos="flip-up">
                 <div class="experience__header">
                     <div class="experience__icon">
                         <i class="fa-solid fa-briefcase"></i>
@@ -178,7 +185,8 @@
                 </ul>
             </section>
 
-            <section class="experience__card">
+            <!--GCBA-->
+            <section class="experience__card" data-aos="flip-up">
                 <div class="experience__header">
                     <div class="experience__icon">
                         <i class="fa-solid fa-briefcase"></i>
@@ -229,56 +237,9 @@
                     </li>
                 </ul>
             </section>
-
-            <section class="experience__card">
-                <div class="experience__header">
-                    <div class="experience__icon">
-                        <i class="fa-solid fa-briefcase"></i>
-                    </div>
-
-                    <div class="experience__title">
-                        <h3>
-                            Mentor en Desarrollo Web
-                            <span>@ UTN Buenos Aires</span>
-                        </h3>
-
-                        <div class="experience__meta">
-                            <span class="experience__location">
-                                <i class="fa-solid fa-location-dot"></i>
-                                Argentina · Presencial
-                            </span>
-                            <span class="experience__date">
-                                Abril 2022 - Noviembre 2022
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <ul class="experience__list">
-                    <li>
-                        Me desempeñé como Mentor en Desarrollo Web – Front End, acompañando a chicas y chicos
-                        que transitaban los últimos años de la escuela secundaria.
-                    </li>
-                    <li>
-                        Introducción a los fundamentos del desarrollo web mediante prácticas accesibles,
-                        lógicas y orientadas a la comprensión real de la tecnología.
-                    </li>
-                    <li>
-                        Enseñanza de buenas prácticas en HTML semántico, estructura de proyectos y uso de
-                        herramientas de control de versiones.
-                    </li>
-                    <li>
-                        Fomento del pensamiento lógico y la resolución de problemas a través del diseño y
-                        maquetado de interfaces web responsivas.
-                    </li>
-                    <li class="experience__tools">
-                        Aptitudes y herramientas: HTML semántico, HTML5, CSS Flexbox, CSS Grid, CSS Forms,
-                        Bootstrap, Git, GitHub, Git BASH.
-                    </li>
-                </ul>
-            </section>
-
-            <section class="experience__card">
+            
+            <!--TECNO KIDS-->
+            <section class="experience__card" data-aos="flip-up">
                 <div class="experience__header">
                     <div class="experience__icon">
                         <i class="fa-solid fa-briefcase"></i>
@@ -326,159 +287,240 @@
                     </li>
                 </ul>
             </section>
+
+            <!-- UTN -->
+            <section class="experience__card" data-aos="flip-up">
+                <div class="experience__header">
+                    <div class="experience__icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <div class="experience__title">
+                        <h3>
+                            Mentor en Desarrollo Web
+                            <span>@ UTN Buenos Aires</span>
+                        </h3>
+
+                        <div class="experience__meta">
+                            <span class="experience__location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Argentina · Presencial
+                            </span>
+                            <span class="experience__date">
+                                Abril 2022 - Noviembre 2022
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="experience__list">
+                    <li>
+                        Me desempeñé como Mentor en Desarrollo Web – Front End, acompañando a chicas y chicos
+                        que transitaban los últimos años de la escuela secundaria.
+                    </li>
+                    <li>
+                        Introducción a los fundamentos del desarrollo web mediante prácticas accesibles,
+                        lógicas y orientadas a la comprensión real de la tecnología.
+                    </li>
+                    <li>
+                        Enseñanza de buenas prácticas en HTML semántico, estructura de proyectos y uso de
+                        herramientas de control de versiones.
+                    </li>
+                    <li>
+                        Fomento del pensamiento lógico y la resolución de problemas a través del diseño y
+                        maquetado de interfaces web responsivas.
+                    </li>
+                    <li class="experience__tools">
+                        Aptitudes y herramientas: HTML semántico, HTML5, CSS Flexbox, CSS Grid, CSS Forms,
+                        Bootstrap, Git, GitHub, Git BASH.
+                    </li>
+                </ul>
+            </section>
         </section>
 
         <section class="skills" id="habilidades">
-            <h2 class="skills__title">Habilidades</h2>
+            <h2 class="skills__title" data-aos="fade-down">Habilidades</h2>
 
             <div class="skills__grid">
 
                 <!-- Backend -->
-                <article class="skills__card skills__card--backend" tabindex="0">
-                <div class="skills__card-inner">
+                <article class="skills__card skills__card--backend" tabindex="0" data-aos="zoom-in">
+                    <div class="skills__card-inner">
 
-                    <div class="skills__face skills__face--front">
-                    <header class="skills__header">
-                        <i class="fa-solid fa-server"></i>
-                        <h3>Desarrollo Backend</h3>
-                    </header>
-                    <ul class="skills__list">
-                        <li>PHP</li>
-                        <li>PHPUnit</li>
-                        <li>Python</li>
-                        <li>FastAPI</li>
-                        <li>APIs REST</li>
-                    </ul>
+                        <div class="skills__face skills__face--front">
+                        <header class="skills__header">
+                            <i class="fa-solid fa-server"></i>
+                            <h3>Desarrollo Backend</h3>
+                        </header>
+                        <ul class="skills__list">
+                            <li>PHP</li>
+                            <li>PHPUnit</li>
+                            <li>Python</li>
+                            <li>FastAPI</li>
+                            <li>APIs REST</li>
+                        </ul>
+                        </div>
+
+                        <div class="skills__face skills__face--back">
+                        <p>
+                            Desarrollo de lógica de negocio, APIs y servicios backend
+                            orientados a escalabilidad, mantenimiento y comunicación
+                            con sistemas frontend y externos.
+                        </p>
+                        </div>
+
                     </div>
-
-                    <div class="skills__face skills__face--back">
-                    <p>
-                        Desarrollo de lógica de negocio, APIs y servicios backend
-                        orientados a escalabilidad, mantenimiento y comunicación
-                        con sistemas frontend y externos.
-                    </p>
-                    </div>
-
-                </div>
                 </article>
 
                 <!-- Frontend -->
-                <article class="skills__card skills__card--frontend" tabindex="0">
-                <div class="skills__card-inner">
+                <article class="skills__card skills__card--frontend" tabindex="0" data-aos="zoom-in">
+                    <div class="skills__card-inner">
 
-                    <div class="skills__face skills__face--front">
-                    <header class="skills__header">
-                        <i class="fa-solid fa-palette"></i>
-                        <h3>Desarrollo Frontend</h3>
-                    </header>
-                    <ul class="skills__list">
-                        <li>HTML5 Semántico</li>
-                        <li>CSS3 / SASS</li>
-                        <li>JavaScript (ES6+)</li>
-                        <li>React.js</li>
-                        <li>Flexbox & Grid</li>
-                        <li>Tailwind / Bootstrap</li>
-                        <li>UX / UI</li>
-                    </ul>
+                        <div class="skills__face skills__face--front">
+                        <header class="skills__header">
+                            <i class="fa-solid fa-palette"></i>
+                            <h3>Desarrollo Frontend</h3>
+                        </header>
+                        <ul class="skills__list">
+                            <li>HTML5 Semántico</li>
+                            <li>CSS3 / SASS</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React.js</li>
+                            <li>Flexbox & Grid</li>
+                            <li>Tailwind / Bootstrap</li>
+                            <li>UX / UI</li>
+                        </ul>
+                        </div>
+
+                        <div class="skills__face skills__face--back">
+                        <p>
+                            Creación de interfaces modernas, accesibles y responsivas,
+                            priorizando experiencia de usuario, claridad visual
+                            y buenas prácticas de desarrollo.
+                        </p>
+                        </div>
+
                     </div>
-
-                    <div class="skills__face skills__face--back">
-                    <p>
-                        Creación de interfaces modernas, accesibles y responsivas,
-                        priorizando experiencia de usuario, claridad visual
-                        y buenas prácticas de desarrollo.
-                    </p>
-                    </div>
-
-                </div>
                 </article>
 
                 <!-- Herramientas -->
-                <article class="skills__card skills__card--tools" tabindex="0">
-                <div class="skills__card-inner">
+                <article class="skills__card skills__card--tools" tabindex="0" data-aos="zoom-in">
+                    <div class="skills__card-inner">
 
-                    <div class="skills__face skills__face--front">
-                    <header class="skills__header">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <h3>Infraestructura & Herramientas</h3>
-                    </header>
-                    <ul class="skills__list">
-                        <li>Git / GitHub / Bitbucket</li>
-                        <li>MySQL</li>
-                        <li>WordPress</li>
-                        <li>Node.js (entorno)</li>
-                        <li>JIRA</li>
-                    </ul>
+                        <div class="skills__face skills__face--front">
+                        <header class="skills__header">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <h3>Infraestructura & Herramientas</h3>
+                        </header>
+                        <ul class="skills__list">
+                            <li>Git / GitHub / Bitbucket</li>
+                            <li>MySQL</li>
+                            <li>WordPress</li>
+                            <li>Node.js (entorno)</li>
+                            <li>JIRA</li>
+                        </ul>
+                        </div>
+
+                        <div class="skills__face skills__face--back">
+                        <p>
+                            Uso de herramientas de control de versiones, gestión
+                            de proyectos y entornos de desarrollo que acompañan
+                            flujos de trabajo profesionales y colaborativos.
+                        </p>
+                        </div>
+
                     </div>
-
-                    <div class="skills__face skills__face--back">
-                    <p>
-                        Uso de herramientas de control de versiones, gestión
-                        de proyectos y entornos de desarrollo que acompañan
-                        flujos de trabajo profesionales y colaborativos.
-                    </p>
-                    </div>
-
-                </div>
                 </article>
 
                 <!-- QA -->
-                <article class="skills__card skills__card--qa" tabindex="0">
-                <div class="skills__card-inner">
+                <article class="skills__card skills__card--qa" tabindex="0" data-aos="zoom-in">
+                    <div class="skills__card-inner">
 
-                    <div class="skills__face skills__face--front">
-                    <header class="skills__header">
-                        <i class="fa-solid fa-bug"></i>
-                        <h3>QA & Testing</h3>
-                    </header>
-                    <ul class="skills__list">
-                        <li>Testing manual funcional</li>
-                        <li>Casos de prueba</li>
-                        <li>Documentación de bugs</li>
-                        <li>Postman</li>
-                        <li>Testing de APIs</li>
-                        <li>Automatización básica</li>
-                    </ul>
+                        <div class="skills__face skills__face--front">
+                        <header class="skills__header">
+                            <i class="fa-solid fa-bug"></i>
+                            <h3>QA & Testing</h3>
+                        </header>
+                        <ul class="skills__list">
+                            <li>Testing manual funcional</li>
+                            <li>Casos de prueba</li>
+                            <li>Documentación de bugs</li>
+                            <li>Postman</li>
+                            <li>Testing de APIs</li>
+                            <li>Automatización básica</li>
+                        </ul>
+                        </div>
+
+                        <div class="skills__face skills__face--back">
+                        <p>
+                            Enfoque en calidad de software, detección temprana
+                            de errores y documentación clara para mejorar
+                            procesos de desarrollo y experiencia final.
+                        </p>
+                        </div>
+
                     </div>
-
-                    <div class="skills__face skills__face--back">
-                    <p>
-                        Enfoque en calidad de software, detección temprana
-                        de errores y documentación clara para mejorar
-                        procesos de desarrollo y experiencia final.
-                    </p>
-                    </div>
-
-                </div>
                 </article>
 
+                <!-- Diseño & Organización -->
+                <article class="skills__card skills__card--design" tabindex="0" data-aos="zoom-in">
+                    <div class="skills__card-inner">
+
+                        <div class="skills__face skills__face--front">
+                        <header class="skills__header">
+                            <i class="fa-solid fa-pen-ruler"></i>
+                            <h3>Diseño & Organización</h3>
+                        </header>
+                        <ul class="skills__list">
+                            <li>Figma</li>
+                            <li>Mockups / Wireframes</li>
+                            <li>Trello</li>
+                            <li>Notion</li>
+                            <li>Slack</li>
+                            <li>WordPress</li>
+                        </ul>
+                        </div>
+
+                        <div class="skills__face skills__face--back">
+                        <p>
+                            Utilizo estas herramientas para diseñar interfaces,
+                            planificar proyectos, organizar contenidos y facilitar
+                            la comunicación en equipos educativos y tecnológicos,
+                            desde la idea inicial hasta la implementación final.
+                        </p>
+                        </div>
+
+                    </div>
+                </article>
+
+
                 <!-- Educación -->
-                <article class="skills__card skills__card--personal" tabindex="0">
-                <div class="skills__card-inner">
+                <article class="skills__card skills__card--personal" tabindex="0" data-aos="zoom-in">
+                    <div class="skills__card-inner">
 
-                    <div class="skills__face skills__face--front">
-                    <header class="skills__header">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <h3>Educación & Habilidades Personales</h3>
-                    </header>
-                    <ul class="skills__list">
-                        <li>Pasión por enseñar</li>
-                        <li>Mentoría técnica</li>
-                        <li>Comunicación empática</li>
-                        <li>Acompañamiento humano</li>
-                        <li>Aprendizaje continuo</li>
-                    </ul>
+                        <div class="skills__face skills__face--front">
+                        <header class="skills__header">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <h3>Educación & Habilidades Personales</h3>
+                        </header>
+                        <ul class="skills__list">
+                            <li>Pasión por enseñar</li>
+                            <li>Mentoría técnica</li>
+                            <li>Comunicación empática</li>
+                            <li>Acompañamiento humano</li>
+                            <li>Aprendizaje continuo</li>
+                        </ul>
+                        </div>
+
+                        <div class="skills__face skills__face--back">
+                        <p>
+                            La tecnología como puente para enseñar, acompañar
+                            y generar oportunidades reales, siempre poniendo
+                            a las personas en el centro del proceso.
+                        </p>
+                        </div>
+
                     </div>
-
-                    <div class="skills__face skills__face--back">
-                    <p>
-                        La tecnología como puente para enseñar, acompañar
-                        y generar oportunidades reales, siempre poniendo
-                        a las personas en el centro del proceso.
-                    </p>
-                    </div>
-
-                </div>
                 </article>
 
             </div>
@@ -491,6 +533,13 @@
         
     </footer>
 
+    <!-- AOS (Animate On Scroll) Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+
+    <!-- Script personalizado -->
     <script src="js/js.js"></script>
 </body>
 </html>
