@@ -1,3 +1,4 @@
+// Toggle menu
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("#nav");
 
@@ -29,6 +30,28 @@ window.addEventListener("scroll", () => {
   if (nav.classList.contains("active")) {
     closeMenu();
   }
+});
+
+/* Modal functionality EDUCACIÓN */
+document.querySelectorAll("[data-modal-open]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const modal = document.getElementById(btn.dataset.modalOpen);
+    modal.classList.add("is-active");
+  });
+});
+
+document.querySelectorAll("[data-modal-close]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.closest(".modal").classList.remove("is-active");
+  });
+});
+
+document.querySelectorAll(".modal").forEach(modal => {
+  modal.addEventListener("click", e => {
+    if (e.target === modal) {
+      modal.classList.remove("is-active");
+    }
+  });
 });
 
 

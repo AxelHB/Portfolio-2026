@@ -1,2 +1,108 @@
 @use "../base/variables" as *;
 @use "../components/extends" as *;
+
+.education {
+    padding: 80px 30px;
+
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        background: linear-gradient(90deg, var(--accent), var(--primary));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+    }
+
+    &__card {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        @extend .about__box;
+    }
+
+    &__institution {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        img {
+        width: 38px;
+        height: 38px;
+        object-fit: contain;
+        opacity: 0.85;
+        }
+    }
+
+    &__date {
+        font-size: 0.85rem;
+        opacity: 0.6;
+    }
+
+    &__desc {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    &__btn {
+        margin-top: auto;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        border: 1px solid var(--accent);
+        background: transparent;
+        color: var(--accent);
+        font-size: 0.85rem;
+        cursor: pointer;
+
+        &:hover {
+        background: var(--accent);
+        color: #000;
+        }
+    }
+    }
+
+    /* Modal Styles */
+    .modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+    &.is-active {
+        display: flex;
+    }
+
+    &__content {
+        position: relative;
+        padding: 1rem;
+        max-width: 90%;
+        max-height: 90%;
+        @extend .about__box;
+
+        img {
+        max-width: 100%;
+        max-height: 80vh;
+        border-radius: 8px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        background: none;
+        border: none;
+        font-size: 1.6rem;
+        cursor: pointer;
+        color: var(--text-main);
+    }
+}
