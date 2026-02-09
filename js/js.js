@@ -178,14 +178,3 @@ track.addEventListener("touchend", e => {
   if (endX - startX > 50) index = (index - 1 + slides.length) % slides.length;
   updateCarousel();
 });
-
-
-
-
-
-
-
-
-
-
-
