@@ -69,17 +69,22 @@
             margin-top: 20px;
             font-size: 1.5rem;
             color: var(--text-soft);
-            i {
+            a {
                 margin-right: 15px;
                 cursor: pointer;
-                transition: color 0.3s ease-in-out;
+                font-size: 1.8rem;
+                color: var(--text-soft);
+                transition: color 0.3s ease, transform 0.3s ease;
                 &:hover {
                     color: var(--accent);
+                    transform: translateY(-3px);
                 }
             }
         }
     }
 }
+
+
 
 #about {
     padding-left: 30px;

@@ -2,7 +2,9 @@
 @use "../components/extends" as *;
 
 .education {
-    padding: 80px 30px;
+    margin-top: 3.5rem;
+    padding-left: 30px;
+    padding-right: 30px;
 
     &__title {
         font-size: 2rem;
@@ -59,6 +61,7 @@
         color: var(--accent);
         font-size: 0.85rem;
         cursor: pointer;
+        transition: background 0.3s, color 0.3s;
 
         &:hover {
         background: var(--accent);
@@ -97,12 +100,37 @@
 
     &__close {
         position: absolute;
-        top: 8px;
-        right: 12px;
-        background: none;
-        border: none;
-        font-size: 1.6rem;
-        cursor: pointer;
+        top: -12px;
+        right: -12px;
+
+        width: 34px;
+        height: 34px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+        background: rgba(20, 20, 20, 0.75);
+        backdrop-filter: blur(8px);
+
+        border: 1px solid rgba(255, 255, 255, 0.15);
         color: var(--text-main);
+
+        font-size: 1.2rem;
+        line-height: 1;
+        cursor: pointer;
+
+        transition: 
+            background 0.25s ease,
+            color 0.25s ease,
+            transform 0.25s ease;
+
+        &:hover {
+            background: rgba(220, 38, 38, 0.85); // rojo elegante
+            color: #fff;
+            transform: scale(1.05);
+        }
     }
+
 }
