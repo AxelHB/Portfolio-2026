@@ -178,3 +178,20 @@ track.addEventListener("touchend", e => {
   if (endX - startX > 50) index = (index - 1 + slides.length) % slides.length;
   updateCarousel();
 });
+
+/* ================= ANIMACIÓN HERO ================= */
+document.addEventListener("DOMContentLoaded", () => {
+  const hero = document.querySelector(".hero");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        hero.classList.add("is-visible");
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  observer.observe(hero);
+});

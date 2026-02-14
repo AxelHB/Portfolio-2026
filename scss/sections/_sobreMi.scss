@@ -84,6 +84,44 @@
     }
 }
 
+/* ===== HERO ANIMACIÓN ===== */
+
+.hero__intro,
+.hero__description,
+.hero__button,
+.hero__social-media {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 
+    opacity .7s cubic-bezier(.22,.61,.36,1),
+    transform .7s cubic-bezier(.22,.61,.36,1);
+}
+
+.hero.is-visible .hero__intro {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: .1s;
+}
+
+.hero.is-visible .hero__description {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: .25s;
+}
+
+.hero.is-visible .hero__button {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: .4s;
+}
+
+.hero.is-visible .hero__social-media {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: .55s;
+}
+
+
 
 
 #about {

@@ -1,6 +1,10 @@
 @use "../base/variables" as *;
 @use "../components/extends" as *;
 
+/* =========================
+    CERTIFICATIONS
+========================= */
+
 .certifications {
     margin-top: 3.5rem;
 
@@ -22,6 +26,10 @@
         margin: 0 auto;
     }
 }
+
+/* =========================
+    CERT ITEM
+========================= */
 
 .cert-item {
     display: grid;
@@ -47,11 +55,15 @@
         height: 42px;
         object-fit: contain;
         opacity: .85;
-        transition: all .3s ease;
+        transition: opacity .3s ease, transform .3s ease;
     }
 }
 
-.cert-info {
+/* =========================
+    CERT INFO
+    ========================= */
+
+    .cert-info {
     h4 {
         font-size: .95rem;
         margin: 0;
@@ -62,9 +74,13 @@
         font-size: .78rem;
         opacity: .65;
     }
-}
+    }
 
-.cert-btn {
+    /* =========================
+    CERT BUTTON
+    ========================= */
+
+    .cert-btn {
     background: transparent;
     border: 1px solid var(--accent);
     color: var(--accent);
@@ -75,11 +91,13 @@
     font-size: .75rem;
     cursor: pointer;
 
-    transition: all .25s ease;
+    transition: background .25s ease,
+                color .25s ease,
+                transform .25s ease;
 
     &:hover {
         background: var(--accent);
         color: #fff;
+        transform: translateY(-2px);
     }
 }
-
