@@ -3,7 +3,8 @@ const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("#nav");
 const header = document.querySelector("#header");
 const links = nav.querySelectorAll("a");
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll("section[id]");
+
 
 /* ================= MENU ================= */
 const closeMenu = () => {
@@ -41,19 +42,26 @@ const onScrollActiveLink = () => {
   let current = "";
 
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 120;
-    const sectionHeight = section.offsetHeight;
+    const rect = section.getBoundingClientRect();
+    const offset = 140;
 
-    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-      current = section.getAttribute("id");
+    if (rect.top <= offset && rect.bottom >= offset) {
+      current = section.id;
     }
   });
 
+  //FIX FOOTER
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 5) {
+    current = "contacto";
+  }
+
+  if (!current) return;
+
   links.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("active");
-    }
+    link.classList.toggle(
+      "active",
+      link.getAttribute("href") === `#${current}`
+    );
   });
 };
 
@@ -62,10 +70,8 @@ window.addEventListener("scroll", () => {
   onScrollHeader();
   onScrollActiveLink();
 
-  if (nav.classList.contains("active")) {
-    closeMenu();
-  }
-});
+  if (nav.classList.contains("active")) closeMenu();
+}, { passive: true });
 
 /* ================= MODAL IMAGE ================= */
 const modal = document.getElementById("global-modal");
