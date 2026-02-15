@@ -553,7 +553,7 @@ body.is-loading > *:not(#preloader) {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: clamp(2rem, 6vh, 4rem);
+  gap: clamp(0.5rem, 2vh, 1rem);
 }
 .hero .hero__greeting {
   display: block;

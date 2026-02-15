@@ -196,41 +196,30 @@ track.addEventListener("touchend", e => {
   updateCarousel();
 });
 
-/* ================= ANIMACIÓN HERO ================= */
-document.addEventListener("DOMContentLoaded", () => {
-  const hero = document.querySelector(".hero");
-
-  const observer = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          hero.classList.add("is-visible");
-          obs.unobserve(hero); // solo se anima una vez
-        }
-      });
-    },
-    {
-      threshold: 0.05
-    }
-  );
-
-  observer.observe(hero);
-});
-
-/* ================= PRELOADER ================= */
+/* ================= PRELOADER + HERO ================= */
 window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+
   const preloader = document.getElementById("preloader");
+  const hero = document.querySelector(".hero");
 
   setTimeout(() => {
     preloader.classList.add("is-hidden");
     document.body.classList.remove("is-loading");
 
-    setTimeout(() => {
+    preloader.addEventListener("transitionend", () => {
       preloader.remove();
-    }, 800);
 
-  }, 800); // tiempo mínimo para que se vea elegante
+      // 👇 Esperamos un frame para que el navegador pinte
+      requestAnimationFrame(() => {
+        hero.classList.add("is-visible");
+      });
+    });
+
+  }, 800);
 });
+
+
 
 
 

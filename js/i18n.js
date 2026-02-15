@@ -496,21 +496,22 @@ const translations = {
 };
 
 // ============================
-// FUNCION CAMBIO DE IDIOMA
+// SISTEMA DE IDIOMA CON RECARGA COMPLETA
 // ============================
 
 const langBtn = document.getElementById("langToggle");
 const cvLink = document.getElementById("cvLink");
 
-function setLanguage(lang) {
+/* ========= APLICAR IDIOMA ========= */
+function applyLanguage(lang) {
 
+  // Cambiar textos normales
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
     const translation = translations[lang][key];
 
     if (!translation) return;
 
-    // Si es una lista (UL), usamos innerHTML
     if (el.tagName === "UL") {
       el.innerHTML = translation;
     } else {
@@ -518,32 +519,46 @@ function setLanguage(lang) {
     }
   });
 
+  // Cambiar placeholders
   document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
     const key = el.getAttribute("data-i18n-placeholder");
     el.placeholder = translations[lang][key];
   });
 
+  // Cambiar link del CV
   cvLink.href =
     lang === "es"
       ? "public/cv/CV_Axel_Henderson_Bianchi_ATS_ES.pdf"
       : "public/cv/CV_Axel_Henderson_Bianchi_ATS_EN.pdf";
 
+  // Cambiar texto del botón
   langBtn.textContent = lang === "es" ? "EN" : "ES";
-  document.documentElement.lang = lang;
 
-  localStorage.setItem("language", lang);
+  // Cambiar atributo html lang
+  document.documentElement.lang = lang;
 }
 
-
-// evento click
+/* ========= CLICK BOTÓN ========= */
 langBtn.addEventListener("click", () => {
+
   const current = localStorage.getItem("language") || "es";
   const newLang = current === "es" ? "en" : "es";
-  setLanguage(newLang);
+
+  // Guardar idioma
+  localStorage.setItem("language", newLang);
+
+  // Forzar recarga completa (activa preloader + animaciones)
+  window.location.reload();
 });
 
-// al cargar
+/* ========= AL CARGAR LA PÁGINA ========= */
 document.addEventListener("DOMContentLoaded", () => {
+
   const savedLang = localStorage.getItem("language") || "es";
-  setLanguage(savedLang);
+
+  applyLanguage(savedLang);
+
+  // Forzar scroll (por las dudas)
+  window.scrollTo(0, 0);
 });
+
