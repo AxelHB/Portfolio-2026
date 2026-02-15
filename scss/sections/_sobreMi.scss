@@ -2,17 +2,18 @@
 @use "../components/extends" as *;
 
 .hero {
-    padding-top: 80px;
+    min-height: 100vh;
+    padding-top: 80px; // compensación header fixed
     padding-inline: 20px;
     display: flex;
-    flex-direction: column;
 
     .hero__content {
-        min-height: calc(100dvh - 80px);
+        flex: 1;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: clamp(.5rem, 2vh, 1rem);
+        justify-content: space-around;
+
+        gap: clamp(.75rem, 2vh, 1.25rem);
     }
 
     .hero__greeting {
@@ -63,8 +64,8 @@
     }
 
     .hero__social-media {
-        margin-top: 20px;
         font-size: 1.5rem;
+        padding-top: 20px;
 
         a {
             margin-right: 15px;
@@ -77,8 +78,8 @@
             }
         }
     }
-}
 
+}
 /* ===== ANIMACIÓN HERO ===== */
 
 .hero__intro,
@@ -206,6 +207,7 @@
             }
         }
     }
+
     
 }
 

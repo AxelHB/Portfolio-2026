@@ -2,14 +2,15 @@
 @use "../components/extends" as *;
 
 .education {
-    margin-top: 3.5rem;
     padding-left: 30px;
     padding-right: 30px;
 
     &__title {
+        margin-top: 3.5rem;
         font-size: 2rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
         text-align: center;
+
         background: linear-gradient(90deg, var(--accent), var(--primary));
         background-clip: text;
         -webkit-text-fill-color: transparent;

@@ -543,17 +543,17 @@ body.is-loading > *:not(#preloader) {
 }
 
 .hero {
+  min-height: 100vh;
   padding-top: 80px;
   padding-inline: 20px;
   display: flex;
-  flex-direction: column;
 }
 .hero .hero__content {
-  min-height: calc(100dvh - 80px);
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: clamp(0.5rem, 2vh, 1rem);
+  justify-content: space-around;
+  gap: clamp(0.75rem, 2vh, 1.25rem);
 }
 .hero .hero__greeting {
   display: block;
@@ -598,8 +598,8 @@ body.is-loading > *:not(#preloader) {
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
 .hero .hero__social-media {
-  margin-top: 20px;
   font-size: 1.5rem;
+  padding-top: 20px;
 }
 .hero .hero__social-media a {
   margin-right: 15px;
@@ -823,17 +823,17 @@ body.is-loading > *:not(#preloader) {
 }
 
 .skills {
-  margin-top: 3.5rem;
   padding-left: 30px;
   padding-right: 30px;
-  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .skills h2 {
+  margin-top: 3.5rem;
   font-size: 2rem;
-  margin-bottom: clamp(2rem, 6vh, 4rem);
+  margin-bottom: 2.5rem;
+  text-align: center;
   background: linear-gradient(90deg, var(--accent), var(--primary));
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -952,13 +952,13 @@ body.is-loading > *:not(#preloader) {
   }
 }
 .education {
-  margin-top: 3.5rem;
   padding-left: 30px;
   padding-right: 30px;
 }
 .education__title {
+  margin-top: 3.5rem;
   font-size: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   text-align: center;
   background: linear-gradient(90deg, var(--accent), var(--primary));
   background-clip: text;
@@ -1137,11 +1137,8 @@ CERT BUTTON
   transform: translateY(-2px);
 }
 
-.projects {
-  margin-top: 4rem;
-  padding: 0 30px;
-}
 .projects__title {
+  margin-top: 3.5rem;
   font-size: 2rem;
   margin-bottom: 2.5rem;
   text-align: center;
