@@ -231,3 +231,6 @@ window.addEventListener("load", () => {
 
   }, 800); // tiempo mínimo para que se vea elegante
 });
+
+
+

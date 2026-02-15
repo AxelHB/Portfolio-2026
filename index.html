@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <html lang="es">
 
     <!-- SEO -->
     <title>Axel Henderson Bianchi | Desarrollador Frontend & Educador EdTech</title>
@@ -57,8 +56,10 @@
 
 
     <header id="header">
-        <a class="btn-cv" href="CV ATS/CV_Axel_Henderson_Bianchi_ATS.pdf" target="_blank">Curriculum</a>
-        <!-- <button class="btn-cv">Curriculum</button> -->
+        <a id="cvLink" class="btn-cv" href="public/cv/CV_Axel_Henderson_Bianchi_ATS_ES.pdf" target="_blank" data-i18n="cv"> Curriculum </a>
+        <button id="langToggle" class="lang-btn">
+            EN
+        </button>
 
         <button class="menu-toggle" aria-label="Abrir menú">
             <span></span>
@@ -66,13 +67,13 @@
 
         <nav id="nav">
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#about">Sobre Mí</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#educacion">Educación</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#inicio" data-i18n="nav_inicio">Inicio</a></li>
+                <li><a href="#about" data-i18n="nav_about">Sobre Mí</a></li>
+                <li><a href="#experiencia" data-i18n="nav_experiencia">Experiencia</a></li>
+                <li><a href="#habilidades" data-i18n="nav_habilidades">Habilidades</a></li>
+                <li><a href="#educacion" data-i18n="nav_educacion">Educación</a></li>
+                <li><a href="#proyectos" data-i18n="nav_proyectos">Proyectos</a></li>
+                <li><a href="#contacto" data-i18n="nav_contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -83,16 +84,16 @@
             <div class="hero__content">
                 
                 <div class="hero__intro">
-                    <span class="hero__greeting">Hola, soy</span>
+                    <span class="hero__greeting" data-i18n="hero_greeting">Hola, soy</span>
                     <h1 class="hero__name">Axel Henderson Bianchi</h1>
-                    <h2 class="hero__role">Desarrollador Front-End & Educador</h2>
+                    <h2 class="hero__role" data-i18n="hero_role">Desarrollador Front-End & Educador</h2>
                 </div>
 
-                <p class="hero__description">
+                <p class="hero__description" data-i18n="hero_desc">
                     Desarrollador con más de seis años de experiencia en el ámbito educativo, enfocado en crear soluciones digitales y experiencias interactivas que acompañan procesos de aprendizaje reales y aportan valor a través de la tecnología.
                 </p>
 
-                <a href="#proyectos" class="hero__button">¡Mirá mi trabajo!</a>
+                <a href="#proyectos" class="hero__button" data-i18n="hero_cta">¡Mirá mi trabajo!</a>
 
                 <div class="hero__social-media">
                     <a href="https://github.com/AxelHB" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -105,16 +106,16 @@
 
         
         <section id="about">
-            <h2>Sobre Mí</h2>
+            <h2 data-i18n="about_title">Sobre Mí</h2>
             <section class="about__content">
                 
                 <div class="about__text">
                     <div class="about__icon">
                         <i class="fa-solid fa-circle-info"></i>
                     </div>
-                    <p>Desde hace más de seis años trabajo en el ámbito educativo como desarrollador y formador, combinando tecnología, creatividad y vocación docente. A lo largo de este recorrido participé en distintos proyectos e instituciones vinculadas a la educación digital, desarrollando soluciones tecnológicas y experiencias interactivas que acompañan procesos de aprendizaje reales.</p>
+                    <p data-i18n="about_p1">Desde hace más de seis años trabajo en el ámbito educativo como desarrollador y formador, combinando tecnología, creatividad y vocación docente. A lo largo de este recorrido participé en distintos proyectos e instituciones vinculadas a la educación digital, desarrollando soluciones tecnológicas y experiencias interactivas que acompañan procesos de aprendizaje reales.</p>
                     <br>
-                    <p>Mi enfoque está en enseñar, guiar y transmitir conocimientos de forma clara, práctica y significativa, apoyándome en fundamentos técnicos sólidos y en una mirada pedagógica centrada en las personas. Me motiva crear herramientas que no solo funcionen bien, sino que también ayuden a aprender y comprender mejor.</p>
+                    <p data-i18n="about_p2">Mi enfoque está en enseñar, guiar y transmitir conocimientos de forma clara, práctica y significativa, apoyándome en fundamentos técnicos sólidos y en una mirada pedagógica centrada en las personas. Me motiva crear herramientas que no solo funcionen bien, sino que también ayuden a aprender y comprender mejor.</p>
                 </div>
                 <div class="about__image">
                     <img src="images/Perfil.jpg" alt="Foto de perfil de Axel HB">
@@ -123,7 +124,7 @@
         </section>
 
         <section id="experiencia">
-            <h2>Experiencia</h2>
+            <h2 data-i18n="exp_title">Experiencia</h2>
 
             <!--DIGITAL FLOW-->
             <section class="experience__card">
@@ -133,9 +134,9 @@
                     </div>
 
                     <div class="experience__title">
-                        <h3>
+                        <h3 data-i18n="exp_df_title">
                             Especialista de Proyecto
-                            <span>@ Digital Flow</span>
+                            <span>@Digital Flow</span>
                         </h3>
 
                         <div class="experience__meta">
@@ -143,14 +144,14 @@
                                 <i class="fa-solid fa-location-dot"></i>
                                 Saint Gregory's College · Presencial
                             </span>
-                            <span class="experience__date">
+                            <span class="experience__date" data-i18n="exp_df_date">
                                 Marzo 2025 - Presente
                             </span>
                         </div>
                     </div>
                 </div>
 
-                <ul class="experience__list">
+                <ul class="experience__list" data-i18n="exp_df_desc">
                     <li>
                         Colaboro en la integración de tecnologías creativas aplicadas a la gestión y el desarrollo
                         de instituciones educativas, con foco en innovación y transformación digital.
@@ -182,9 +183,9 @@
                     </div>
 
                     <div class="experience__title">
-                        <h3>
+                        <h3 data-i18n="exp_ch_title">
                             Education Mentor – Desarrollo Web Front End
-                            <span>@ Coderhouse</span>
+                            <span>@Coderhouse</span>
                         </h3>
 
                         <div class="experience__meta">
@@ -192,14 +193,14 @@
                                 <i class="fa-solid fa-location-dot"></i>
                                 CABA · En remoto
                             </span>
-                            <span class="experience__date">
+                            <span class="experience__date" data-i18n="exp_ch_date">
                                 Enero 2023 - Presente
                             </span>
                         </div>
                     </div>
                 </div>
 
-                <ul class="experience__list">
+                <ul class="experience__list" data-i18n="exp_ch_desc">
                     <li>
                         Mentor y profesor en la tecnología de Desarrollo Web Front End, acompañando a estudiantes
                         durante todo el proceso de aprendizaje teórico y práctico.
@@ -235,9 +236,9 @@
                     </div>
 
                     <div class="experience__title">
-                        <h3>
+                        <h3 data-i18n="exp_gcba_title">
                             Instructor & Education Mentor
-                            <span>@ Ministerio de Educación GCBA</span>
+                            <span>@Ministerio de Educación GCBA</span>
                         </h3>
 
                         <div class="experience__meta">
@@ -245,14 +246,14 @@
                                 <i class="fa-solid fa-location-dot"></i>
                                 CABA · Remoto · Presencial
                             </span>
-                            <span class="experience__date">
+                            <span class="experience__date" data-i18n="exp_gcba_date">
                                 Enero 2020 - Presente
                             </span>
                         </div>
                     </div>
                 </div>
 
-                <ul class="experience__list">
+                <ul class="experience__list" data-i18n="exp_gcba_desc">
                     <li>
                         Diseño e imparto un curso completo de QA Testing, abarcando pruebas manuales y automatizadas,
                         orientado a entornos reales de desarrollo y a la inserción laboral.
@@ -288,9 +289,9 @@
                     </div>
 
                     <div class="experience__title">
-                        <h3>
+                        <h3 data-i18n="exp_tk_title">
                             Profesor
-                            <span>@ TecnoKids LATAM</span>
+                            <span>@TecnoKids LATAM</span>
                         </h3>
 
                         <div class="experience__meta">
@@ -298,14 +299,14 @@
                                 <i class="fa-solid fa-location-dot"></i>
                                 Nuñez / Belgrano · Presencial
                             </span>
-                            <span class="experience__date">
+                            <span class="experience__date" data-i18n="exp_tk_date">
                                 Enero 2025 - Noviembre 2025
                             </span>
                         </div>
                     </div>
                 </div>
 
-                <ul class="experience__list">
+                <ul class="experience__list" data-i18n="exp_tk_desc">
                     <li>
                         Profesor en TecnoKids LATAM, dedicado a la enseñanza de robótica, programación y
                         desarrollo de videojuegos para chicos y chicas de distintas edades.
@@ -338,9 +339,9 @@
                     </div>
 
                     <div class="experience__title">
-                        <h3>
+                        <h3  data-i18n="exp_utn_title">
                             Mentor en Desarrollo Web
-                            <span>@ UTN Buenos Aires</span>
+                            <span>@UTN Buenos Aires</span>
                         </h3>
 
                         <div class="experience__meta">
@@ -348,14 +349,14 @@
                                 <i class="fa-solid fa-location-dot"></i>
                                 CABA · Presencial
                             </span>
-                            <span class="experience__date">
+                            <span class="experience__date" data-i18n="exp_utn_date">
                                 Abril 2022 - Noviembre 2022
                             </span>
                         </div>
                     </div>
                 </div>
 
-                <ul class="experience__list">
+                <ul class="experience__list" data-i18n="exp_utn_desc">
                     <li>
                         Me desempeñé como Mentor en Desarrollo Web – Front End, acompañando a chicas y chicos
                         que transitaban los últimos años de la escuela secundaria.
@@ -381,7 +382,7 @@
         </section>
 
         <section class="skills" id="habilidades">
-            <h2 class="skills__title">Habilidades</h2>
+            <h2 class="skills__title" data-i18n="skills_title">Habilidades</h2>
 
             <div class="skills__grid">
 
@@ -392,7 +393,7 @@
                         <div class="skills__face skills__face--front">
                         <header class="skills__header">
                             <i class="fa-solid fa-server"></i>
-                            <h3>Desarrollo Backend</h3>
+                            <h3 data-i18n="skills_backend_title">Desarrollo Backend</h3>
                         </header>
                         <ul class="skills__list">
                             <li>PHP</li>
@@ -404,7 +405,7 @@
                         </div>
 
                         <div class="skills__face skills__face--back">
-                        <p>
+                        <p data-i18n="skills_backend_desc">
                             Desarrollo de lógica de negocio, APIs y servicios backend
                             orientados a escalabilidad, mantenimiento y comunicación
                             con sistemas frontend y externos.
@@ -421,7 +422,7 @@
                         <div class="skills__face skills__face--front">
                         <header class="skills__header">
                             <i class="fa-solid fa-palette"></i>
-                            <h3>Desarrollo Frontend</h3>
+                            <h3 data-i18n="skills_front_title">Desarrollo Frontend</h3>
                         </header>
                         <ul class="skills__list">
                             <li>HTML5 Semántico</li>
@@ -435,7 +436,7 @@
                         </div>
 
                         <div class="skills__face skills__face--back">
-                        <p>
+                        <p data-i18n="skills_front_desc">
                             Creación de interfaces modernas, accesibles y responsivas,
                             priorizando experiencia de usuario, claridad visual
                             y buenas prácticas de desarrollo.
@@ -452,7 +453,7 @@
                         <div class="skills__face skills__face--front">
                         <header class="skills__header">
                             <i class="fa-solid fa-screwdriver-wrench"></i>
-                            <h3>Infraestructura & Herramientas</h3>
+                            <h3 data-i18n="skills_tools_title">Infraestructura & Herramientas</h3>
                         </header>
                         <ul class="skills__list">
                             <li>Git / GitHub / Bitbucket</li>
@@ -464,7 +465,7 @@
                         </div>
 
                         <div class="skills__face skills__face--back">
-                        <p>
+                        <p data-i18n="skills_tools_desc">
                             Uso de herramientas de control de versiones, gestión
                             de proyectos y entornos de desarrollo que acompañan
                             flujos de trabajo profesionales y colaborativos.
@@ -481,7 +482,7 @@
                         <div class="skills__face skills__face--front">
                         <header class="skills__header">
                             <i class="fa-solid fa-bug"></i>
-                            <h3>QA & Testing</h3>
+                            <h3 data-i18n="skills_qa_title">QA & Testing</h3>
                         </header>
                         <ul class="skills__list">
                             <li>Testing manual funcional</li>
@@ -494,7 +495,7 @@
                         </div>
 
                         <div class="skills__face skills__face--back">
-                        <p>
+                        <p data-i18n="skills_qa_desc">
                             Enfoque en calidad de software, detección temprana
                             de errores y documentación clara para mejorar
                             procesos de desarrollo y experiencia final.
@@ -511,7 +512,7 @@
                         <div class="skills__face skills__face--front">
                         <header class="skills__header">
                             <i class="fa-solid fa-pen-ruler"></i>
-                            <h3>Diseño & Organización</h3>
+                            <h3 data-i18n="skills_design_title">Diseño & Organización</h3>
                         </header>
                         <ul class="skills__list">
                             <li>Figma</li>
@@ -524,7 +525,7 @@
                         </div>
 
                         <div class="skills__face skills__face--back">
-                        <p>
+                        <p data-i18n="skills_design_desc">
                             Utilizo estas herramientas para diseñar interfaces,
                             planificar proyectos, organizar contenidos y facilitar
                             la comunicación en equipos educativos y tecnológicos,
@@ -543,7 +544,7 @@
                         <div class="skills__face skills__face--front">
                         <header class="skills__header">
                             <i class="fa-solid fa-graduation-cap"></i>
-                            <h3>Educación & Habilidades Personales</h3>
+                            <h3 data-i18n="skills_personal_title">Educación & Habilidades Personales</h3>
                         </header>
                         <ul class="skills__list">
                             <li>Pasión por enseñar</li>
@@ -555,7 +556,7 @@
                         </div>
 
                         <div class="skills__face skills__face--back">
-                        <p>
+                        <p data-i18n="skills_personal_desc">
                             La tecnología como puente para enseñar, acompañar
                             y generar oportunidades reales, siempre poniendo
                             a las personas en el centro del proceso.
@@ -569,7 +570,7 @@
         </section>
 
         <section class="education" id="educacion">
-            <h2 class="education__title">Educación</h2>
+            <h2 class="education__title" data-i18n="edu_title">Educación</h2>
 
             <div class="education__grid">
 
@@ -581,15 +582,15 @@
                             <img src="icons/esba.webp" alt="ESBA logo">
                         </a>
                         <div>
-                            <h3>Auditoría de Sistemas</h3>
-                            <span>Estudios Superiores de Buenos Aires</span>
+                            <h3 data-i18n="edu_esba_title">Auditoría de Sistemas</h3>
+                            <span data-i18n="edu_esba_institution">Estudios Superiores de Buenos Aires</span>
                         </div>
                         </div>
                     </header>
 
                     <p class="education__date">oct. 2025 – ene. 2026</p>
 
-                    <p class="education__desc">
+                    <p class="education__desc" data-i18n="edu_esba_desc">
                         Certificación orientada a Auditoría de Sistemas y Tecnologías de la
                         Información, con foco en control interno, controles de TI,
                         gestión de riesgos y seguridad de la información.
@@ -597,7 +598,8 @@
 
                     <button
                         class="education__btn"
-                        data-modal-img="images/Esba.jpg">
+                        data-modal-img="images/Esba.jpg" 
+                        data-i18n="view_cert">
                         Ver certificado
                     </button>
                 </article>
@@ -610,22 +612,23 @@
                             <img src="icons/ymca.jpg" alt="YMCA logo">
                         </a>
                         <div>
-                            <h3>Diplomatura en Robótica e IoT</h3>
-                            <span>Fondazione YMCA Italia</span>
+                            <h3 data-i18n="edu_ymca_title">Diplomatura en Robótica e IoT</h3>
+                            <span data-i18n="edu_ymca_institution">Fondazione YMCA Italia</span>
                         </div>
                         </div>
                     </header>
 
                     <p class="education__date">mar. 2022 – sept. 2022</p>
 
-                    <p class="education__desc">
+                    <p class="education__desc" data-i18n="edu_ymca_desc">
                         Formación en robótica e Internet de las Cosas aplicada a
                         entornos educativos, integrando hardware y software.
                     </p>
 
                     <button
                         class="education__btn"
-                        data-modal-img="images/YMCA.jpg">
+                        data-modal-img="images/YMCA.jpg"
+                        data-i18n="view_cert">
                         Ver certificado
                     </button>
                 </article>
@@ -638,22 +641,23 @@
                             <img src="icons/otto-krause.png" alt="Otto Krause logo">
                         </a>
                         <div>
-                            <h3>Perito Auxiliar en Informática</h3>
-                            <span>Escuela Técnica Otto Krause</span>
+                            <h3 data-i18n="edu_otto_title">Perito Auxiliar en Informática</h3>
+                            <span data-i18n="edu_otto_institution">Escuela Técnica Otto Krause</span>
                         </div>
                         </div>
                     </header>
 
                     <p class="education__date">2013 – 2018</p>
 
-                    <p class="education__desc">
+                    <p class="education__desc" data-i18n="edu_otto_desc">
                         Formación técnica integral en informática, sistemas,
                         redes y soporte técnico.
                     </p>
 
                     <button
                         class="education__btn"
-                        data-modal-img="#">
+                        data-modal-img="#"
+                        data-i18n="view_cert">
                         Ver certificado
                     </button>
                 </article>
@@ -663,7 +667,7 @@
             <!-- CERTIFICACIONES -->
             <sectionc class="certifications">
 
-                <h2 class="certifications__title">Certificaciones</h2>
+                <h2 class="certifications__title" data-i18n="cert_title">Certificaciones</h2>
 
                 <div class="certifications__list">
 
@@ -677,7 +681,8 @@
 
                         <button
                             class="cert-btn"
-                            data-modal-img="images/certificaciones/power-bi.jpg">
+                            data-modal-img="images/certificaciones/power-bi.jpg"
+                            data-i18n="view">
                             Ver
                         </button>
                     </article>
@@ -692,7 +697,8 @@
 
                         <button
                             class="cert-btn"
-                            data-modal-img="images/certificaciones/multimedia-con-ia.jpg">
+                            data-modal-img="images/certificaciones/multimedia-con-ia.jpg"
+                            data-i18n="view">
                             Ver
                         </button>
                     </article>
@@ -707,7 +713,8 @@
 
                         <button
                             class="cert-btn"
-                            data-modal-img="images/certificaciones/figma.jpg">
+                            data-modal-img="images/certificaciones/figma.jpg"
+                            data-i18n="view">
                             Ver
                         </button>
                     </article>
@@ -722,7 +729,8 @@
 
                         <button
                             class="cert-btn"
-                            data-modal-img="images/certificaciones/fullstack-codoacodo.jpg">
+                            data-modal-img="images/certificaciones/fullstack-codoacodo.jpg"
+                            data-i18n="view">
                             Ver
                         </button>
                     </article>
@@ -737,7 +745,8 @@
 
                         <button
                             class="cert-btn"
-                            data-modal-img="images/certificaciones/frontend-utn.jpg">
+                            data-modal-img="images/certificaciones/frontend-utn.jpg"
+                            data-i18n="view">
                             Ver
                         </button>
                     </article>
@@ -752,7 +761,8 @@
 
                         <button
                             class="cert-btn"
-                            data-modal-img="images/certificaciones/cloud-computing.jpg">
+                            data-modal-img="images/certificaciones/cloud-computing.jpg"
+                            data-i18n="view">
                             Ver
                         </button>
                     </article>
@@ -764,7 +774,7 @@
 
         <!-- PROYECTOS -->
         <section class="projects" id="proyectos">
-            <h2 class="projects__title">Proyectos</h2>
+            <h2 class="projects__title" data-i18n="projects_title">Proyectos</h2>
 
             <div class="projects-carousel" data-carousel>
 
@@ -850,11 +860,6 @@
             </div>
         </section>
 
-
-
-
-
-
     </main>
 
     <footer class="footer" id="contacto">
@@ -864,7 +869,7 @@
             <!-- Identidad -->
             <div class="footer__identity">
                 <h3>Axel Henderson Bianchi</h3>
-                <p>
+                <p data-i18n="footer_desc">
                     Desarrollador Frontend & Educador.<br>
                     Tecnología con foco humano y educativo.
                 </p>
@@ -877,7 +882,7 @@
 
             <!-- Redes -->
             <div class="footer__social">
-                <h4>Conectemos</h4>
+                <h4 data-i18n="footer_connect">Conectemos</h4>
 
                 <div class="footer__icons">
                     <a href="https://github.com/AxelHB" target="_blank" aria-label="GitHub">
@@ -896,7 +901,7 @@
 
             <!-- Contacto -->
             <div class="footer__contact">
-                <h4>Contacto</h4>
+                <h4 data-i18n="footer_contact">Contacto</h4>
 
                 <a href="hendersonaxel06@gmail.com" class="footer__email">
                     hendersonaxel06@gmail.com
@@ -908,11 +913,11 @@
                     method="POST"
                     class="footer__form"
                 >
-                    <input type="text" name="name" placeholder="Tu nombre" required>
-                    <input type="email" name="email" placeholder="Tu email" required>
-                    <textarea name="message" rows="4" placeholder="Tu mensaje" required></textarea>
+                    <input type="text" name="name" placeholder="Tu nombre" required data-i18n-placeholder="form_name">
+                    <input type="email" name="email" placeholder="Tu email" required data-i18n-placeholder="form_email">
+                    <textarea name="message" rows="4" placeholder="Tu mensaje" required data-i18n-placeholder="form_message"></textarea>
 
-                    <button type="submit">Enviar</button>
+                    <button type="submit" data-i18n="form_send">Enviar</button>
 
                     <p class="footer__form-status" aria-live="polite"></p>
                 </form>
@@ -937,7 +942,10 @@
         </div>
     </div>
 
+    <!-- Script de internacionalización -->
+    <script src="js/i18n.js"></script>
     <!-- Script personalizado -->
     <script src="js/js.js"></script>
+
 </body>
 </html>
