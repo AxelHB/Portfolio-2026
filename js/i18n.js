@@ -532,7 +532,8 @@ function applyLanguage(lang) {
       : "public/cv/CV_Axel_Henderson_Bianchi_ATS_EN.pdf";
 
   // Cambiar texto del botón
-  langBtn.textContent = lang === "es" ? "EN" : "ES";
+  const langCode = document.querySelector(".lang-code");
+  langCode.textContent = lang === "es" ? "EN" : "ES";
 
   // Cambiar atributo html lang
   document.documentElement.lang = lang;
