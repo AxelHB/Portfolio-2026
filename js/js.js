@@ -1,3 +1,14 @@
+window.scrollTo(0, 0);
+
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+});
+
+
 /* ================= SELECTORS ================= */
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("#nav");
@@ -189,15 +200,34 @@ track.addEventListener("touchend", e => {
 document.addEventListener("DOMContentLoaded", () => {
   const hero = document.querySelector(".hero");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        hero.classList.add("is-visible");
-      }
-    });
-  }, {
-    threshold: 0.3
-  });
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          hero.classList.add("is-visible");
+          obs.unobserve(hero); // solo se anima una vez
+        }
+      });
+    },
+    {
+      threshold: 0.05
+    }
+  );
 
   observer.observe(hero);
+});
+
+/* ================= PRELOADER ================= */
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+
+  setTimeout(() => {
+    preloader.classList.add("is-hidden");
+    document.body.classList.remove("is-loading");
+
+    setTimeout(() => {
+      preloader.remove();
+    }, 800);
+
+  }, 800); // tiempo mínimo para que se vea elegante
 });
