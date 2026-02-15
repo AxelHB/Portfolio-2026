@@ -200,6 +200,7 @@ window.addEventListener("load", () => {
 
   const preloader = document.getElementById("preloader");
   const hero = document.querySelector(".hero");
+  const social = document.querySelector(".social-floating");
 
   setTimeout(() => {
     preloader.classList.add("is-hidden");
@@ -208,14 +209,19 @@ window.addEventListener("load", () => {
     preloader.addEventListener("transitionend", () => {
       preloader.remove();
 
-      // 👇 Esperamos un frame para que el navegador pinte
       requestAnimationFrame(() => {
         hero.classList.add("is-visible");
+
+        // DELAY SOCIAL
+        setTimeout(() => {
+          social.classList.add("is-visible");
+        }, 700);
       });
     });
 
   }, 800);
 });
+
 
 
 

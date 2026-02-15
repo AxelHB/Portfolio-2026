@@ -570,6 +570,73 @@ body.is-loading > *:not(#preloader) {
   pointer-events: none;
 }
 
+.social-floating {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 1000;
+}
+.social-floating a {
+  width: 44px;
+  height: 44px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+  color: var(--accent);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.social-floating a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px rgba(var(--accent-rgb), 0.35);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 480px) {
+  .social-floating {
+    bottom: 16px;
+    right: 16px;
+  }
+  .social-floating a {
+    width: 40px;
+    height: 40px;
+  }
+}
+.social-floating {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.social-floating.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .hero {
   min-height: 100vh;
   padding-top: 80px;
@@ -625,25 +692,15 @@ body.is-loading > *:not(#preloader) {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
-.hero .hero__social-media {
-  font-size: 1.5rem;
-  padding-top: 20px;
-}
-.hero .hero__social-media a {
-  margin-right: 15px;
-  font-size: 1.8rem;
-  color: var(--text-soft);
-  transition: color 0.3s ease;
-}
-.hero .hero__social-media a:hover {
-  color: var(--accent);
+.hero .hero__button:hover {
+  border-color: var(--accent);
+  box-shadow: 0 3px 9px 0 var(--accent);
 }
 
 /* ===== ANIMACIÓN HERO ===== */
 .hero__intro,
 .hero__description,
-.hero__button,
-.hero__social-media {
+.hero__button {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -665,16 +722,6 @@ body.is-loading > *:not(#preloader) {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.4s;
-}
-.hero.is-visible .hero__button:hover {
-  border-color: var(--accent);
-  box-shadow: 0 3px 9px 0 var(--accent);
-}
-
-.hero.is-visible .hero__social-media {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.55s;
 }
 
 /* ================= SOBRE MI ================= */
