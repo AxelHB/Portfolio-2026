@@ -160,6 +160,19 @@ h6 {
   background: rgba(20, 30, 50, 0.55);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  /* línea decorativa debajo del header */
+}
+#header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 90%;
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+#header {
   /* ================= BTN CV ================= */
 }
 #header .btn-cv {

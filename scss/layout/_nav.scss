@@ -17,6 +17,24 @@
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
+  /* línea decorativa debajo del header */
+    &::after {
+    content: "";
+    position: absolute;
+    bottom: 0; // 👈 cambio clave
+    left: 50%;
+    width: 90%;
+    height: 1px;
+    transform: translateX(-50%);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--accent),
+      transparent
+    );
+  }
+
+
   /* ================= BTN CV ================= */
   .btn-cv {
     position: absolute;
